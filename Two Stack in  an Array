@@ -1,4 +1,7 @@
-public static class TwoStack {
+
+public class Main {
+
+  public static class TwoStack {
     int[] data;
     int top1;
     int top2;
@@ -35,7 +38,7 @@ public static class TwoStack {
       data[top2] = val;
     }
     int pop1() {
-       if(top2 == -1){
+       if(top1 == -1){
         //stack 1 underflow
         System.out.println("Stack underflow");
         return -1;
@@ -43,7 +46,8 @@ public static class TwoStack {
     int val = data[top1];   
     top1--; 
     return val;     
-    }      
+    }
+      
     int pop2() {
       if(top2 == data.length){
         //stack 2 underflow
@@ -55,12 +59,13 @@ public static class TwoStack {
     return val;     
     }
     int top1() {
-      if(top2 == data.length){
+      if(top1 == -1){
         System.out.println("Stack underflow");
         return -1;
       }
       return data[top1];
     }
+
     int top2() {
       if(top2 == data.length){
         System.out.println("Stack underflow");
