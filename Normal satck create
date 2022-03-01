@@ -47,7 +47,6 @@ public class Main {
       top--;
       return val;
     }
-
     int top() {
        // O(1)
        if(top == -1){
